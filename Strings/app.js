@@ -77,7 +77,7 @@ function search(){
     }
     const obj = {};
     arr.forEach((el) => {
-        obj[el] = (obj[el] || 0) + 1
+        obj[el] = (obj[el] || 0) + 1;
     })
     // return obj;
     const update = Array.from(new Set(arr));
