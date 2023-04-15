@@ -55,18 +55,25 @@
 
 //=====EV TAPSIRIGI=======
 const arr = [7,55,32,91,87,21,74,252,2,-6,42,15,-41];
+let maxCut = arr[0];
+let minTek = arr[0];
 for(let i = 0; i < arr.length; i++){
-    // if(arr[i] % 2 === 0){
-    //     console.log(arr[i]);
-    // }
-    // if(arr[i] % 2 !== 0){
-    //     console.log(arr[i]);
-    // }
-    // if(arr[i] < 0){
-    //     console.log(arr[i]);
-    // }
-    // console.log(arr[i] *= 2);
-    if(arr[i] > 40){
-        console.log(arr[i]);
+    if(maxCut < arr[i] && arr[i] % 2 === 0){
+        maxCut = arr[i];
+    }
+    if(minTek > arr[i] && arr[i] % 2 !== 0){
+        minTek = arr[i];
     }
 }
+console.log(maxCut);
+console.log(minTek);
+console.log("Evvel",arr);
+
+function move(){
+    let maxElement = arr.indexOf(maxCut);
+    let minElement = arr.indexOf(minTek);
+    arr.splice(minElement, 1, maxCut);
+    arr.splice(maxElement, 1, minTek);
+    return arr;
+}
+console.log("Sonra",move());

@@ -1,3 +1,4 @@
+"use strict"
 // let word  = "Men Lenkeranda yasayiram";
 // let update = word.slice(3, 12);
 // update = word.padEnd(50, "*")
@@ -68,12 +69,19 @@ function search(){
     let arr = [];
     for(let i = 0; i < word.length; i++){
         for(let j = i + 1; j < word.length; j++){
-            if(word[i] === word[j] && word[i] !== " " && word[i] !== "." ){
+            if(word[i] === word[j] && word[i] !== " " && word[i] !== "."){
                 arr.push(word[i]);
+                break;
             }
         }
     }
-    const update = Array.from(new Set(arr))
+    const obj = {};
+    arr.forEach((el) => {
+        obj[el] = (obj[el] || 0) + 1
+    })
+    // return obj;
+    const update = Array.from(new Set(arr));
     return update;
 }
+
 console.log(search());
