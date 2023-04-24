@@ -24,6 +24,9 @@ body{
     height: 300px;
     /* border: 1px solid red; */
     border-radius: 10px;
+    background-image: url("./images/snowy_mountain.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .container .pics{
     display: flex;
