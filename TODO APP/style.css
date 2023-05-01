@@ -3,33 +3,71 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 50px;
+    gap: 30px;
 }
-
 .form-control{
-    border: 2px solid gray;
-    border-radius: 20px;
-    width: 600px;
+    margin-top: 20px;
+    border: 2px solid rgb(207, 207, 207);
+    width: 700px;
     height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
 }
-.form-control input{
+#input{
     width: 400px;
     height: 30px;
 }
-.add{
-    width: 80px;
+.addBtn{
+    width: 100px;
     height: 30px;
     border: none;
-    background-color: green;
+    background-color: rgb(27, 46, 219);
     color: white;
     border-radius: 5px;
+}
+.list{
+    width: 700px;
+    padding: 20px 40px;
+    border: 1px solid black;
+    position: relative;
+}
+.list li{
+    margin-bottom: 20px;
+    position: relative;
+    font-size: 20px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+.list .delete{
+    position: absolute;
+    right: 10px;
+    border: none;
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.edit{
+    color: white;
+    position: absolute;
+    right: 100px;
+    border: none;
+    background-color: green;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.clear-all{
+    width: 100px;
+    height: 30px;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    border: none;
 }
