@@ -6,33 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body{
+            background-color: black;
+            color: white;
+        }
         table{
-            width: 300px;
+            text-align: center;
+            border-collapse: collapse;
+            border: 1px solid white;
+            width: 600px;
         }
-        table tr th{
-            border: 1px solid black;
+        table tr{
+            border: 1px solid white;
+            width: 50px;
+            height: 50px;
         }
-        table tr td{
-            border: 1px solid black;
+        th,td{
+            border: 1px solid white;
         }
     </style>
 </head>
 <body>
-    <!-- <button class="startBtn">Start</button>
-    <button class="stopBtn">Stop</button><br>
-    <span class="show"></span> -->
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Description</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+            <!-- <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr> -->
+        </tbody>
 
-    <table id="table" style="border-collapse: collapse; border: 1px solid black;">
-        <tr>
-            <th>ID</th>
-            <th>Description</th>
-            <th>Name</th>
-        </tr>
-        <tr>
-            <td class="id-content"></td>
-            <td class="desc-content"></td>
-            <td class="name-content"></td>
-        </tr>
     </table>
     <script src="app.js"></script>
 </body>
